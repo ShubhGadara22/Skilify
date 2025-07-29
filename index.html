@@ -1,615 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>SkillTrack - Multi-page Skill Tracking</title>
-<style>
-  :root {
-    --primary-color: #0077ff;
-    --accent-color: #00c18d;
-    --background-color: #181a20;
-    --card-bg: #23262f;
-    --text-color: #ececec;
-    --error-color: #f77;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    background: var(--background-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
-  }
-  nav {
-    background: var(--card-bg);
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  }
-  nav .logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: var(--primary-color);
-  }
-  nav ul {
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    align-items: center;
-  }
-  nav ul li a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  nav ul li a:hover {
-    color: var(--accent-color);
-  }
-  #loginBtn,
-  #logoutBtn {
-    background: var(--accent-color);
-    border: none;
-    color: white;
-    padding: 8px 18px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    font-size: 1rem;
-    margin-left: 8px;
-  }
-  #loginBtn:hover,
-  #logoutBtn:hover {
-    background: var(--primary-color);
-  }
-  .hidden {
-    display: none;
-  }
-  .container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 15px;
-    min-height: 400px;
-  }
-  /* Skill card */
-  .skill-card {
-    background: var(--card-bg);
-    border-radius: 12px;
-    padding: 18px 22px;
-    margin: 18px 0;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-  }
-  .skill-card:hover {
-    transform: translateY(-4px) scale(1.02);
-  }
-  .skill-bar-bg {
-    background: #22242a;
-    border-radius: 8px;
-    height: 16px;
-    margin: 10px 0 0 0;
-    width: 80%;
-    position: relative;
-  }
-  .skill-bar {
-    position: absolute;
-    height: 100%;
-    border-radius: 8px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-    transition: width 0.7s ease-in-out;
-  }
-  .skill-level {
-    font-size: 0.95rem;
-    margin-top: 2px;
-    color: var(--accent-color);
-  }
-  button.track-btn {
-    background: var(--primary-color);
-    color: #fff;
-    border: none;
-    padding: 6px 14px;
-    border-radius: 8px;
-    cursor: pointer;
-    float: right;
-    margin-left: 12px;
-  }
-  button.track-btn:hover {
-    background: var(--accent-color);
-  }
-  /* Modal */
-  #loginModal {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  #loginModal.hidden {
-    display: none;
-  }
-  #loginModal .modal-content {
-    background: var(--card-bg);
-    padding: 36px 34px;
-    border-radius: 12px;
-    width: 320px;
-    box-shadow: 0 4px 30px rgba(0,0,0,0.2);
-    position: relative;
-  }
-  #loginModal input[type=email],
-  #loginModal input[type=password] {
-    width: 100%;
-    padding: 10px;
-    margin: 14px 0;
-    border-radius: 7px;
-    border: 1px solid #222;
-    background: #23262f;
-    color: #fff;
-    font-size: 1rem;
-    outline-offset: 1.5px;
-    outline-color: var(--primary-color);
-  }
-  #loginModal button {
-    width: 100%;
-    padding: 11px;
-    border: none;
-    border-radius: 7px;
-    background: var(--primary-color);
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.3s ease-in-out;
-  }
-  #loginModal button:hover {
-    background: var(--accent-color);
-  }
-  .close {
-    position: absolute;
-    right: 16px;
-    top: 10px;
-    font-size: 2.2rem;
-    color: #fff;
-    cursor: pointer;
-    user-select: none;
-  }
-  .error-msg {
-    color: var(--error-color);
-    font-size: 0.9rem;
-    margin-top: 8px;
-    min-height: 22px;
-  }
-  /* Responsive */
-  @media (max-width: 630px) {
-    nav ul {
-      gap: 12px;
-    }
-    nav .logo {
-      font-size: 1.3rem;
-    }
-    .container {
-      padding: 0 8px;
-      margin: 25px auto;
-      min-height: 350px;
-    }
-    #loginModal .modal-content {
-      width: 90vw;
-      padding: 28px 20px;
-    }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkillTrack - Multi-page Skill Tracking</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Background decoration -->
+  <div class="bg-decoration"></div>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <i class="fas fa-chart-line"></i>
+        <span>SkillTrack</span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#" id="navHome" class="nav-link active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" id="navSkills" class="nav-link">
+            <i class="fas fa-brain"></i>
+            <span>Skills</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" id="navModules" class="nav-link">
+            <i class="fas fa-book-open"></i>
+            <span>Modules</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" id="navProfile" class="nav-link">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+      </ul>
+      <div class="nav-actions">
+        <button id="loginBtn" class="btn btn-primary">
+          <i class="fas fa-sign-in-alt"></i>
+          Login
+        </button>
+        <button id="logoutBtn" class="btn btn-outline hidden">
+          <i class="fas fa-sign-out-alt"></i>
+          Logout
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
 
-<nav>
-  <div class="logo">SkillTrack</div>
-  <ul>
-    <li><a href="#" id="navHome">Home</a></li>
-    <li><a href="#" id="navSkills">Skills</a></li>
-    <li><a href="#" id="navModules">Modules</a></li>
-    <li><a href="#" id="navProfile">Profile</a></li>
-  </ul>
-  <div>
-    <button id="loginBtn">Login</button>
-    <button id="logoutBtn" class="hidden">Logout</button>
-  </div>
-</nav>
-
-<div class="container" id="mainContent">
-  <h1>Welcome to SkillTrack</h1>
-  <p>Please login to track your skills and progress.</p>
-</div>
-
-<!-- Login Modal -->
-<div id="loginModal" class="hidden" aria-modal="true" role="dialog">
-  <div class="modal-content">
-    <span class="close" id="closeModal" aria-label="Close Login">&times;</span>
-    <h2>Login</h2>
-    <input type="email" id="emailInput" placeholder="Email (must be @gmail.com)" required autocomplete="username" />
-    <input type="password" id="passwordInput" placeholder="Password" required autocomplete="current-password" />
-    <button id="submitLogin">Login / Sign Up</button>
-    <div class="error-msg" id="loginError"></div>
-  </div>
-</div>
-
-<script>
-  // ===== DATA =====
-  const skills = [
-    {
-      name: "Web Development",
-      category: "Tech",
-      description: "Build websites and web applications using HTML, CSS, JavaScript, and frameworks.",
-      resources: [
-        {type: "PDF", label: "HTML & CSS Intro", link: "https://www.w3schools.com/html/html_intro.asp"},
-        {type: "Video", label: "JavaScript Crash Course", link: "https://youtu.be/hdI2bqOjy3c"},
-        {type: "Paid", label: "Udemy Web Dev Bootcamp", link: "https://www.udemy.com/course/the-web-developer-bootcamp/"}
-      ],
-      progress: 35,
-      modules: [
-        {ch: "1", title: "Introduction", info: "Overview, web basics."},
-        {ch: "2", title: "Frontend", info: "HTML, CSS, JS basics."},
-        {ch: "3", title: "Backend", info: "Servers, Databases."},
-        {ch: "4", title: "Deployment", info: "Git, Hosting, CI/CD."}
-      ]
-    },
-    {
-      name: "Data Analysis (Python)",
-      category: "Tech",
-      description: "Analyze data, automate reporting, and visualize insights with Python.",
-      resources: [
-        {type: "PDF", label: "Pandas Cheat Sheet", link: "https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf"},
-        {type: "Video", label: "Python for Data Science", link: "https://youtu.be/r-uOLxNrNk8"},
-        {type: "Paid", label: "Coursera Data Analysis", link: "https://www.coursera.org/specializations/data-science-python"}
-      ],
-      progress: 60,
-      modules: [
-        {ch: "1", title: "Intro", info: "What is data analysis?"},
-        {ch: "2", title: "Python Basics", info: "Syntax and libraries."},
-        {ch: "3", title: "Data Cleaning", info: "Data wrangling."},
-        {ch: "4", title: "Visualization", info: "Graphs and insights."}
-      ]
-    },
-    {
-      name: "Public Speaking",
-      category: "Soft Skill",
-      description: "Become a confident speaker and communicator.",
-      resources: [
-        {type: "PDF", label: "TEDx Guide", link: "https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide"},
-        {type: "Video", label: "Public Speaking Tips", link: "https://youtu.be/tShavGuo0_E"},
-        {type: "Paid", label: "Coursera Effective Communication", link: "https://www.coursera.org/learn/effective-communication"}
-      ],
-      progress: 20,
-      modules: [
-        {ch: "1", title: "Introduction", info: "Importance of public speaking."},
-        {ch: "2", title: "Basic Techniques", info: "Overcoming nervousness."},
-        {ch: "3", title: "Advanced Delivery", info: "Persuasive speaking."}
-      ]
-    },
-    {
-      name: "Financial Literacy",
-      category: "Life Skill",
-      description: "Learn basics of budgeting, saving, and investing.",
-      resources: [
-        {type: "PDF", label: "RBI Guide", link: "https://rbidocs.rbi.org.in/rdocs/Publications/PDFs/72684.pdf"},
-        {type: "Video", label: "Money Management 101", link: "https://youtu.be/5QYK6pKw1n8"},
-        {type: "Paid", label: "NSE Financial Education", link: "https://www.nseindia.com/financial-education"}
-      ],
-      progress: 10,
-      modules: [
-        {ch: "1", title: "Budgeting", info: "Income, Expenses."},
-        {ch: "2", title: "Banking", info: "Accounts, Loans."},
-        {ch: "3", title: "Investing", info: "Stock market basics."}
-      ]
-    }
-  ];
-
-  // ===== STORAGE KEYS =====
-  const USERS_KEY = 'skilltrack_users';
-  const LOGGED_IN_USER = 'skilltrack_loggedin_user';
-
-  // ===== DOM Elements =====
-  const loginBtn = document.getElementById('loginBtn');
-  const logoutBtn = document.getElementById('logoutBtn');
-  const loginModal = document.getElementById('loginModal');
-  const closeModal = document.getElementById('closeModal');
-  const submitLogin = document.getElementById('submitLogin');
-  const mainContent = document.getElementById('mainContent');
-  const loginError = document.getElementById('loginError');
-  const emailInput = document.getElementById('emailInput');
-  const passwordInput = document.getElementById('passwordInput');
-  const navHome = document.getElementById('navHome');
-  const navSkills = document.getElementById('navSkills');
-  const navModules = document.getElementById('navModules');
-  const navProfile = document.getElementById('navProfile');
-
-  // ===== Helpers =====
-
-  function getUsers() {
-    const data = localStorage.getItem(USERS_KEY);
-    return data ? JSON.parse(data) : {};
-  }
-
-  function saveUsers(users) {
-    localStorage.setItem(USERS_KEY, JSON.stringify(users));
-  }
-
-  function setLoggedIn(email) {
-    localStorage.setItem(LOGGED_IN_USER, email);
-  }
-
-  function getLoggedIn() {
-    return localStorage.getItem(LOGGED_IN_USER);
-  }
-
-  function clearLoggedIn() {
-    localStorage.removeItem(LOGGED_IN_USER);
-  }
-
-  function isValidGmail(email) {
-    return typeof email === 'string' && email.trim().toLowerCase().endsWith('@gmail.com');
-  }
-
-  function getUserData(email) {
-    const users = getUsers();
-    if (!users[email]) return null;
-    if (!users[email].data) {
-      users[email].data = { progress: skills.map(() => 0) };
-      saveUsers(users);
-    }
-    return users[email].data;
-  }
-
-  function saveUserData(email, data) {
-    const users = getUsers();
-    if (!users[email]) return;
-    users[email].data = data;
-    saveUsers(users);
-  }
-
-  // ===== UI & Navigation =====
-
-  function updateUIForUser(email) {
-    loginBtn.classList.add('hidden');
-    logoutBtn.classList.remove('hidden');
-    document.querySelector('.logo').textContent = `SkillTrack (${email.split('@')[0]})`;
-    loadHome();
-  }
-
-  function showLoginModal() {
-    loginError.textContent = '';
-    emailInput.value = '';
-    passwordInput.value = '';
-    loginModal.classList.remove('hidden');
-    emailInput.focus();
-  }
-
-  function hideLoginModal() {
-    loginModal.classList.add('hidden');
-    loginError.textContent = '';
-  }
-
-  function welcomeContent() {
-    return `
-      <h1>Welcome to SkillTrack</h1>
-      <p>Please login to track your skills and progress.</p>
-    `;
-  }
-
-  function loadHome() {
-    const email = getLoggedIn();
-    if (!email) {
-      mainContent.innerHTML = welcomeContent();
-      return;
-    }
-    const userData = getUserData(email);
-    if (!userData) {
-      mainContent.innerHTML = welcomeContent();
-      return;
-    }
-    for (let i=0; i<skills.length; i++) {
-      skills[i].progress = userData.progress[i] || 0;
-    }
-    let html = `
-      <h2>Discover Skills. Track Progress. Level Up.</h2>
-      <div class="skills-list">
-        ${skills.map((skill, idx) => `
-          <div class="skill-card">
-            <h3>${skill.name} <span style="font-size:0.87rem;color:#aaa">(${skill.category})</span></h3>
-            <p>${skill.description}</p>
-            <div class="skill-bar-bg">
-              <div class="skill-bar" style="width:${skill.progress}%"></div>
-            </div>
-            <div class="skill-level">${skill.progress}% completed
-              <button class="track-btn" data-idx="${idx}">Explore</button>
-            </div>
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container" id="mainContent">
+      <div class="welcome-hero">
+        <h1 class="hero-title">Welcome to SkillTrack</h1>
+        <p class="hero-subtitle">Track your learning journey and master new skills</p>
+        <div class="hero-features">
+          <div class="feature-item">
+            <i class="fas fa-chart-line"></i>
+            <span>Track Progress</span>
           </div>
-        `).join('')}
-      </div>
-    `;
-    mainContent.innerHTML = html;
-
-    mainContent.querySelectorAll("button.track-btn").forEach(btn => {
-      btn.addEventListener('click', () => {
-        let idx = Number(btn.getAttribute('data-idx'));
-        loadSkillDetail(idx);
-      });
-    });
-  }
-
-  function loadSkills() {
-    loadHome();
-  }
-
-  function loadModules() {
-    const email = getLoggedIn();
-    if (!email) {
-      mainContent.innerHTML = welcomeContent();
-      return;
-    }
-    let html = `<h2>All Modules</h2>` +
-      skills.map(skill => `
-        <div class="skill-card">
-          <h3>${skill.name} Modules</h3>
-          <ul>
-            ${skill.modules.map(mod => `<li><b>Ch.${mod.ch}:</b> ${mod.title} - ${mod.info}</li>`).join('')}
-          </ul>
+          <div class="feature-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Learn Skills</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-trophy"></i>
+            <span>Achieve Goals</span>
+          </div>
         </div>
-      `).join('');
-    mainContent.innerHTML = html;
-  }
-
-  function loadProfile() {
-    const email = getLoggedIn();
-    if (!email) {
-      mainContent.innerHTML = `<h3>Please login to view your profile.</h3>`;
-      return;
-    }
-    const userData = getUserData(email);
-    const progressSum = userData.progress.reduce((a,b) => a + b, 0);
-    const averageProgress = (progressSum / (userData.progress.length || 1)).toFixed(0);
-    mainContent.innerHTML = `
-      <h2>Welcome, ${email}</h2>
-      <p>Your progress is saved locally in this browser.</p>
-      <p>You have completed on average <strong>${averageProgress}%</strong> of all skills.</p>
-      <p>Use the navigation links to explore skills, modules, and mark your progress.</p>
-    `;
-  }
-
-  function loadSkillDetail(idx) {
-    const skill = skills[idx];
-    const email = getLoggedIn();
-    if (!email) {
-      mainContent.innerHTML = welcomeContent();
-      return;
-    }
-    const userData = getUserData(email);
-    skill.progress = userData.progress[idx] || 0;
-    let html = `
-      <div class="skill-card" style="max-width:700px; margin:0 auto;">
-        <h2>${skill.name} <span style="font-size:0.75em;color:#aaa">(${skill.category})</span></h2>
-        <p>${skill.description}</p>
-        <div class="skill-bar-bg" style="width:90%">
-          <div class="skill-bar" style="width:${skill.progress}%"></div>
-        </div>
-        <div class="skill-level">${skill.progress}% completed</div>
-
-        <h3>Modules</h3>
-        <ul>
-          ${skill.modules.map(mod => `<li><b>Ch.${mod.ch}: ${mod.title}</b> - ${mod.info}</li>`).join('')}
-        </ul>
-
-        <h3>Resources</h3>
-        <ul>
-          ${skill.resources.map(r => `
-            <li><a href="${r.link}" target="_blank" rel="noopener noreferrer">${r.type}: ${r.label}</a></li>
-          `).join('')}
-        </ul>
-
-        <button class="track-btn" id="progressBtn" style="margin-top:16px">Mark Progress +10%</button>
-        <button class="track-btn" id="backBtn" style="margin-top:16px; background:#555; float:none; margin-left:0;">Back</button>
       </div>
-    `;
-    mainContent.innerHTML = html;
+    </div>
+  </main>
 
-    document.getElementById('progressBtn').addEventListener('click', () => {
-      skill.progress = Math.min(skill.progress + 10, 100);
-      userData.progress[idx] = skill.progress;
-      saveUserData(email, userData);
-      loadSkillDetail(idx);
-    });
-    document.getElementById('backBtn').addEventListener('click', () => {
-      loadHome();
-    });
-  }
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal hidden" aria-modal="true" role="dialog">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">
+          <i class="fas fa-user-circle"></i>
+          Welcome Back
+        </h2>
+        <button class="modal-close" id="closeModal" aria-label="Close Login">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="login-form">
+          <div class="form-group">
+            <label for="emailInput" class="form-label">
+              <i class="fas fa-envelope"></i>
+              Email Address
+            </label>
+            <input 
+              type="email" 
+              id="emailInput" 
+              class="form-input"
+              placeholder="Enter your Gmail address" 
+              required 
+              autocomplete="username" 
+            />
+          </div>
+          <div class="form-group">
+            <label for="passwordInput" class="form-label">
+              <i class="fas fa-lock"></i>
+              Password
+            </label>
+            <input 
+              type="password" 
+              id="passwordInput" 
+              class="form-input"
+              placeholder="Enter your password" 
+              required 
+              autocomplete="current-password" 
+            />
+          </div>
+          <button type="button" id="submitLogin" class="btn btn-primary btn-full">
+            <i class="fas fa-sign-in-alt"></i>
+            Login / Sign Up
+          </button>
+        </form>
+        <div class="error-msg" id="loginError"></div>
+        <div class="login-help">
+          <p><i class="fas fa-info-circle"></i> Use any @gmail.com email to create an account</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  // ===== Event listeners =====
-  loginBtn.addEventListener('click', showLoginModal);
-  closeModal.addEventListener('click', hideLoginModal);
-  logoutBtn.addEventListener('click', () => {
-    clearLoggedIn();
-    loginBtn.classList.remove('hidden');
-    logoutBtn.classList.add('hidden');
-    document.querySelector('.logo').textContent = 'SkillTrack';
-    mainContent.innerHTML = welcomeContent();
-  });
+  <!-- Loading Spinner -->
+  <div class="loading-spinner hidden" id="loadingSpinner">
+    <div class="spinner"></div>
+  </div>
 
-  submitLogin.addEventListener('click', () => {
-    const email = emailInput.value.trim().toLowerCase();
-    const password = passwordInput.value;
-
-    if (!email || !password) {
-      loginError.textContent = 'Please enter email and password.';
-      return;
-    }
-    if (!isValidGmail(email)) {
-      loginError.textContent = 'Email must end with @gmail.com';
-      return;
-    }
-
-    let users = getUsers();
-
-    if (users[email]) {
-      if (users[email] === password) {
-        loginSuccess(email);
-      } else {
-        loginError.textContent = 'Incorrect password.';
-      }
-    } else {
-      users[email] = password;
-      saveUsers(users);
-      loginSuccess(email);
-    }
-  });
-
-  function loginSuccess(email) {
-    setLoggedIn(email);
-    updateUIForUser(email);
-    hideLoginModal();
-  }
-
-  // Navigation event handlers
-  navHome.addEventListener('click', e => {
-    e.preventDefault();
-    loadHome();
-  });
-
-  navSkills.addEventListener('click', e => {
-    e.preventDefault();
-    loadSkills();
-  });
-
-  navModules.addEventListener('click', e => {
-    e.preventDefault();
-    loadModules();
-  });
-
-  navProfile.addEventListener('click', e => {
-    e.preventDefault();
-    loadProfile();
-  });
-
-  // Close modal on ESC key
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && !loginModal.classList.contains('hidden')) {
-      hideLoginModal();
-    }
-  });
-
-  // On initial load
-  window.onload = () => {
-    const email = getLoggedIn();
-    if (email) {
-      updateUIForUser(email);
-    } else {
-      mainContent.innerHTML = welcomeContent();
-    }
-  };
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
