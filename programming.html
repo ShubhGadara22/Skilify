@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming Mastery - SkillMaster Academy</title>
+    <meta name="description" content="Master Python programming from basics to advanced concepts. Complete guide with modules, PDFs, videos, and expert courses.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SkillMaster</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">Skills <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="programming.html">Programming</a>
+                        <a href="web-development.html">Web Development</a>
+                        <a href="data-science.html">Data Science</a>
+                        <a href="design.html">UI/UX Design</a>
+                        <a href="digital-marketing.html">Digital Marketing</a>
+                        <a href="business.html">Business & Finance</a>
+                    </div>
+                </li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Skill Header -->
+    <section class="skill-hero">
+        <div class="container">
+            <div class="skill-hero-content">
+                <div class="skill-breadcrumb">
+                    <a href="index.html">Home</a> > <a href="#skills">Skills</a> > <span>Python Programming</span>
+                </div>
+                <div class="skill-hero-main">
+                    <div class="skill-hero-text">
+                        <div class="skill-badge">
+                            <i class="fab fa-python"></i>
+                            <span>Programming</span>
+                        </div>
+                        <h1>Python Programming Mastery</h1>
+                        <p class="skill-hero-description">Master Python from absolute basics to advanced concepts. Learn to build real-world applications, automate tasks, analyze data, and create web applications with the world's most popular programming language.</p>
+                        
+                        <div class="skill-hero-stats">
+                            <div class="hero-stat">
+                                <i class="fas fa-clock"></i>
+                                <span>40+ Hours</span>
+                            </div>
+                            <div class="hero-stat">
+                                <i class="fas fa-layer-group"></i>
+                                <span>12 Modules</span>
+                            </div>
+                            <div class="hero-stat">
+                                <i class="fas fa-users"></i>
+                                <span>50K+ Students</span>
+                            </div>
+                            <div class="hero-stat">
+                                <i class="fas fa-star"></i>
+                                <span>4.9/5 Rating</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-hero-actions">
+                            <a href="#modules" class="btn btn-primary">
+                                <i class="fas fa-play"></i> Start Learning
+                            </a>
+                            <button class="btn btn-secondary" data-download="Python Complete Guide">
+                                <i class="fas fa-download"></i> Download Guide
+                            </button>
+                        </div>
+                    </div>
+                    <div class="skill-hero-image">
+                        <div class="code-preview">
+                            <div class="code-header">
+                                <span class="code-dot red"></span>
+                                <span class="code-dot yellow"></span>
+                                <span class="code-dot green"></span>
+                                <span class="code-title">hello_world.py</span>
+                            </div>
+                            <div class="code-content">
+                                <pre><code><span class="code-comment"># Your first Python program</span>
+<span class="code-keyword">def</span> <span class="code-function">greet</span>(<span class="code-param">name</span>):
+    <span class="code-keyword">return</span> <span class="code-string">f"Hello, {name}!"</span>
+
+<span class="code-comment"># Call the function</span>
+<span class="code-variable">message</span> = <span class="code-function">greet</span>(<span class="code-string">"Future Python Developer"</span>)
+<span class="code-function">print</span>(<span class="code-variable">message</span>)</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="skill-intro">
+        <div class="container">
+            <div class="intro-content">
+                <h2>Why Learn Python Programming?</h2>
+                <p>Python is the world's fastest-growing major programming language, loved by beginners and professionals alike. Whether you're interested in web development, data science, artificial intelligence, automation, or just want to learn programming fundamentals, Python is your gateway to the tech world.</p>
+                
+                <div class="intro-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Beginner-Friendly</h3>
+                        <p>Python's simple syntax makes it perfect for programming newcomers</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>High Demand</h3>
+                        <p>Python developers are among the highest-paid programmers globally</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Versatile</h3>
+                        <p>Use Python for web apps, data analysis, AI, automation, and more</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-users"></i>
+                        <h3>Strong Community</h3>
+                        <p>Join millions of Python developers and extensive library ecosystem</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path -->
+    <section class="learning-path">
+        <div class="container">
+            <h2>Your Python Learning Journey</h2>
+            <div class="path-timeline">
+                <div class="path-item">
+                    <div class="path-number">1</div>
+                    <div class="path-content">
+                        <h3>Foundation</h3>
+                        <p>Variables, data types, control structures</p>
+                        <span class="path-duration">Week 1-2</span>
+                    </div>
+                </div>
+                <div class="path-item">
+                    <div class="path-number">2</div>
+                    <div class="path-content">
+                        <h3>Core Concepts</h3>
+                        <p>Functions, modules, error handling</p>
+                        <span class="path-duration">Week 3-4</span>
+                    </div>
+                </div>
+                <div class="path-item">
+                    <div class="path-number">3</div>
+                    <div class="path-content">
+                        <h3>Object-Oriented</h3>
+                        <p>Classes, inheritance, polymorphism</p>
+                        <span class="path-duration">Week 5-6</span>
+                    </div>
+                </div>
+                <div class="path-item">
+                    <div class="path-number">4</div>
+                    <div class="path-content">
+                        <h3>Advanced Topics</h3>
+                        <p>Libraries, frameworks, projects</p>
+                        <span class="path-duration">Week 7-8</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section id="modules" class="skill-modules">
+        <div class="container">
+            <h2>Complete Python Curriculum</h2>
+            <p class="section-subtitle">12 comprehensive modules covering everything from basics to advanced Python programming</p>
+            
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="module-info">
+                            <h3>Module 1: Getting Started</h3>
+                            <span class="module-duration">2 hours • 8 lessons</span>
+                        </div>
+                        <div class="module-status">
+                            <i class="fas fa-check-circle completed"></i>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p>Introduction to Python, installation, IDE setup, and your first program</p>
+                        <ul class="module-topics">
+                            <li>What is Python and why use it?</li>
+                            <li>Installing Python and setting up environment</li>
+                            <li>Using Python IDLE and VS Code</li>
+                            <li>Writing your first Python program</li>
+                        </ul>
+                        <div class="module-resources">
+                            <a href="#" class="resource-btn" data-download="Module 1 - Getting Started PDF">
+                                <i class="fas fa-file-pdf"></i> PDF Guide
+                            </a>
+                            <a href="#" class="resource-btn video-link">
+                                <i class="fas fa-video"></i> Video (45 min)
+                            </a>
+                            <a href="#" class="resource-btn">
+                                <i class="fas fa-code"></i> Practice Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="module-info">
+                            <h3>Module 2: Variables & Data Types</h3>
+                            <span class="module-duration">3 hours • 10 lessons</span>
+                        </div>
+                        <div class="module-status">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p>Understanding Python data types, variables, and basic operations</p>
+                        <ul class="module-topics">
+                            <li>Numbers, strings, and booleans</li>
+                            <li>Lists, tuples, and dictionaries</li>
+                            <li>Variable assignment and naming</li>
+                            <li>Type conversion and checking</li>
+                        </ul>
+                        <div class="module-resources">
+                            <a href="#" class="resource-btn" data-download="Module 2 - Data Types PDF">
+                                <i class="fas fa-file-pdf"></i> PDF Guide
+                            </a>
+                            <a href="#" class="resource-btn video-link">
+                                <i class="fas fa-video"></i> Video (65 min)
+                            </a>
+                            <a href="#" class="resource-btn">
+                                <i class="fas fa-code"></i> Practice Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="module-info">
+                            <h3>Module 3: Control Structures</h3>
+                            <span class="module-duration">4 hours • 12 lessons</span>
+                        </div>
+                        <div class="module-status">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p>Conditional statements, loops, and program flow control</p>
+                        <ul class="module-topics">
+                            <li>If, elif, and else statements</li>
+                            <li>For and while loops</li>
+                            <li>Break and continue statements</li>
+                            <li>Nested loops and conditions</li>
+                        </ul>
+                        <div class="module-resources">
+                            <a href="#" class="resource-btn" data-download="Module 3 - Control Structures PDF">
+                                <i class="fas fa-file-pdf"></i> PDF Guide
+                            </a>
+                            <a href="#" class="resource-btn video-link">
+                                <i class="fas fa-video"></i> Video (80 min)
+                            </a>
+                            <a href="#" class="resource-btn">
+                                <i class="fas fa-code"></i> Practice Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-function"></i>
+                        </div>
+                        <div class="module-info">
+                            <h3>Module 4: Functions</h3>
+                            <span class="module-duration">3.5 hours • 11 lessons</span>
+                        </div>
+                        <div class="module-status">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p>Creating reusable code with functions, parameters, and return values</p>
+                        <ul class="module-topics">
+                            <li>Defining and calling functions</li>
+                            <li>Parameters and arguments</li>
+                            <li>Return statements and scope</li>
+                            <li>Lambda functions and decorators</li>
+                        </ul>
+                        <div class="module-resources">
+                            <a href="#" class="resource-btn" data-download="Module 4 - Functions PDF">
+                                <i class="fas fa-file-pdf"></i> PDF Guide
+                            </a>
+                            <a href="#" class="resource-btn video-link">
+                                <i class="fas fa-video"></i> Video (70 min)
+                            </a>
+                            <a href="#" class="resource-btn">
+                                <i class="fas fa-code"></i> Practice Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continue with more modules... -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="module-info">
+                            <h3>Module 5: File Handling</h3>
+                            <span class="module-duration">2.5 hours • 9 lessons</span>
+                        </div>
+                        <div class="module-status">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p>Reading from and writing to files, handling different file formats</p>
+                        <ul class="module-topics">
+                            <li>Opening and closing files</li>
+                            <li>Reading and writing text files</li>
+                            <li>Working with CSV and JSON</li>
+                            <li>File system operations</li>
+                        </ul>
+                        <div class="module-resources">
+                            <a href="#" class="resource-btn" data-download="Module 5 - File Handling PDF">
+                                <i class="fas fa-file-pdf"></i> PDF Guide
+                            </a>
+                            <a href="#" class="resource-btn video-link">
+                                <i class="fas fa-video"></i> Video (55 min)
+                            </a>
+                            <a href="#" class="resource-btn">
+                                <i class="fas fa-code"></i> Practice Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">
+                            <i class="fas fa-object-group"></i>
+                        </div>
+                        <div class="module-info">
+                            <h3>Module 6: Object-Oriented Programming</h3>
+                            <span class="module-duration">5 hours • 15 lessons</span>
+                        </div>
+                        <div class="module-status">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="module-content">
+                        <p>Classes, objects, inheritance, and advanced OOP concepts</p>
+                        <ul class="module-topics">
+                            <li>Classes and objects</li>
+                            <li>Inheritance and polymorphism</li>
+                            <li>Encapsulation and abstraction</li>
+                            <li>Magic methods and properties</li>
+                        </ul>
+                        <div class="module-resources">
+                            <a href="#" class="resource-btn" data-download="Module 6 - OOP PDF">
+                                <i class="fas fa-file-pdf"></i> PDF Guide
+                            </a>
+                            <a href="#" class="resource-btn video-link">
+                                <i class="fas fa-video"></i> Video (95 min)
+                            </a>
+                            <a href="#" class="resource-btn">
+                                <i class="fas fa-code"></i> Practice Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modules-cta">
+                <p>Want to see all 12 modules? <strong>Everything you need is here - no YouTube required!</strong></p>
+                <button class="btn btn-primary">Unlock Full Curriculum</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="skill-resources">
+        <div class="container">
+            <h2>Free Learning Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-category">
+                    <h3><i class="fas fa-file-pdf"></i> PDF Guides & Cheatsheets</h3>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h4>Python Basics Complete Guide</h4>
+                                <p>Comprehensive 50-page guide covering Python fundamentals</p>
+                                <span class="resource-meta">PDF • 2.1 MB • 50 pages</span>
+                            </div>
+                            <a href="#" class="resource-download" data-download="Python Basics Complete Guide">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h4>Python Syntax Cheatsheet</h4>
+                                <p>Quick reference for Python syntax and common operations</p>
+                                <span class="resource-meta">PDF • 0.8 MB • 8 pages</span>
+                            </div>
+                            <a href="#" class="resource-download" data-download="Python Syntax Cheatsheet">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h4>Python Libraries Reference</h4>
+                                <p>Overview of essential Python libraries and their uses</p>
+                                <span class="resource-meta">PDF • 1.5 MB • 25 pages</span>
+                            </div>
+                            <a href="#" class="resource-download" data-download="Python Libraries Reference">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-category">
+                    <h3><i class="fas fa-video"></i> Curated Video Content</h3>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h4>Python for Beginners - Complete Course</h4>
+                                <p>Programming with Mosh • 6 hours comprehensive tutorial</p>
+                                <span class="resource-meta">YouTube • 6h 15m • English</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc" target="_blank" class="resource-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h4>Python OOP Tutorial</h4>
+                                <p>Corey Schafer • Object-oriented programming series</p>
+                                <span class="resource-meta">YouTube • 2h 30m • English</span>
+                            </div>
+                            <a href="https://www.youtube.com/playlist?list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc" target="_blank" class="resource-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h4>Python Projects for Beginners</h4>
+                                <p>Tech With Tim • 12 beginner-friendly projects</p>
+                                <span class="resource-meta">YouTube • 4h 45m • English</span>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=8ext9G7xspg" target="_blank" class="resource-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-category">
+                    <h3><i class="fas fa-graduation-cap"></i> Premium Course Recommendations</h3>
+                    <div class="resource-list">
+                        <div class="resource-item featured">
+                            <div class="resource-info">
+                                <h4>Complete Python Bootcamp</h4>
+                                <p>Jose Portilla • From Zero to Hero in Python • 22 hours</p>
+                                <span class="resource-meta">Udemy • ⭐ 4.6 (400k+ students) • $89.99</span>
+                            </div>
+                            <a href="https://www.udemy.com/course/complete-python-bootcamp/" target="_blank" class="resource-link premium">
+                                <i class="fas fa-crown"></i>
+                            </a>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h4>Python for Everybody Specialization</h4>
+                                <p>University of Michigan • 5-course series on Coursera</p>
+                                <span class="resource-meta">Coursera • ⭐ 4.8 • $49/month</span>
+                            </div>
+                            <a href="https://www.coursera.org/specializations/python" target="_blank" class="resource-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h4>Python Track</h4>
+                                <p>DataCamp • Interactive Python learning path</p>
+                                <span class="resource-meta">DataCamp • ⭐ 4.5 • $35/month</span>
+                            </div>
+                            <a href="https://www.datacamp.com/tracks/python-programmer" target="_blank" class="resource-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resource-note">
+                <p><strong>📌 Credit & Appreciation:</strong> We curate the best content from amazing educators and platforms. All credit goes to the original creators. By using our curated resources, you're supporting these fantastic educators!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Projects -->
+    <section class="practice-projects">
+        <div class="container">
+            <h2>Hands-On Projects</h2>
+            <p class="section-subtitle">Apply your Python knowledge with these real-world projects</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Calculator App</h3>
+                    <p>Build a GUI calculator with basic and advanced operations</p>
+                    <div class="project-skills">
+                        <span>Tkinter</span>
+                        <span>Functions</span>
+                        <span>GUI</span>
+                    </div>
+                    <a href="#" class="project-btn">Start Project</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Web Scraper</h3>
+                    <p>Extract data from websites automatically</p>
+                    <div class="project-skills">
+                        <span>Requests</span>
+                        <span>BeautifulSoup</span>
+                        <span>CSV</span>
+                    </div>
+                    <a href="#" class="project-btn">Start Project</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Data Visualizer</h3>
+                    <p>Create interactive charts and graphs from datasets</p>
+                    <div class="project-skills">
+                        <span>Matplotlib</span>
+                        <span>Pandas</span>
+                        <span>Plotly</span>
+                    </div>
+                    <a href="#" class="project-btn">Start Project</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Snake Game</h3>
+                    <p>Classic Snake game with Python and Pygame</p>
+                    <div class="project-skills">
+                        <span>Pygame</span>
+                        <span>OOP</span>
+                        <span>Game Logic</span>
+                    </div>
+                    <a href="#" class="project-btn">Start Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="skill-faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Is Python good for beginners?</h3>
+                    <p>Absolutely! Python's simple syntax and readability make it the perfect first programming language. You can focus on learning programming concepts without getting bogged down by complex syntax.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> What can I build with Python?</h3>
+                    <p>Python is incredibly versatile! You can build web applications, desktop software, data analysis tools, machine learning models, automation scripts, games, and much more.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> How long does it take to learn Python?</h3>
+                    <p>With consistent practice, you can learn Python basics in 4-6 weeks. To become proficient and job-ready, expect 3-6 months of dedicated learning and project building.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Do I need any prerequisites?</h3>
+                    <p>No prerequisites required! Our course starts from absolute basics. Basic computer literacy and logical thinking are all you need to get started.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="skill-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Master Python Programming?</h2>
+                <p>Join thousands of students who have transformed their careers with Python. <strong>Everything you need to succeed is right here - no need to search elsewhere!</strong></p>
+                <div class="cta-buttons">
+                    <a href="#modules" class="btn btn-primary">Start Learning Now</a>
+                    <a href="contact.html" class="btn btn-outline">Get Help</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>SkillMaster</span>
+                    </div>
+                    <p>Your complete skill development platform. Master any skill with our comprehensive resources, expert guidance, and curated content.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Skills</h4>
+                    <ul>
+                        <li><a href="programming.html">Programming</a></li>
+                        <li><a href="web-development.html">Web Development</a></li>
+                        <li><a href="data-science.html">Data Science</a></li>
+                        <li><a href="design.html">UI/UX Design</a></li>
+                        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                        <li><a href="business.html">Business & Finance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="resources.html">Free PDFs</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                        <li><a href="community.html">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SkillMaster Academy. All rights reserved. | <em>Everything you need to learn - no YouTube required!</em></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
