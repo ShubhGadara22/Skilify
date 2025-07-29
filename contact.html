@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SkillMaster Academy</title>
+    <meta name="description" content="Get in touch with SkillMaster Academy. We're here to help with your learning journey and answer any questions.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SkillMaster</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Skills <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="programming.html">Programming</a>
+                        <a href="web-development.html">Web Development</a>
+                        <a href="data-science.html">Data Science</a>
+                        <a href="design.html">UI/UX Design</a>
+                        <a href="digital-marketing.html">Digital Marketing</a>
+                        <a href="business.html">Business & Finance</a>
+                    </div>
+                </li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1>Get in Touch</h1>
+                <p>We're here to help you on your learning journey. Reach out with any questions, feedback, or suggestions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-methods">
+        <div class="container">
+            <div class="methods-grid">
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Support</h3>
+                    <p>Get detailed help via email</p>
+                    <a href="mailto:support@skillmaster.academy" class="method-link">support@skillmaster.academy</a>
+                    <span class="response-time">Response within 24 hours</span>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Live Chat</h3>
+                    <p>Quick answers to your questions</p>
+                    <button class="method-link chat-btn">Start Chat</button>
+                    <span class="response-time">Available 9 AM - 6 PM EST</span>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <h3>Community Discord</h3>
+                    <p>Join our learning community</p>
+                    <a href="#" class="method-link">Join Discord</a>
+                    <span class="response-time">24/7 community support</span>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone Support</h3>
+                    <p>Speak directly with our team</p>
+                    <a href="tel:+1-555-SKILL-01" class="method-link">+1 (555) SKILL-01</a>
+                    <span class="response-time">Mon-Fri, 9 AM - 6 PM EST</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-content">
+                <div class="form-header">
+                    <h2>Send us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="course">Course Question</option>
+                            <option value="billing">Billing & Payments</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="feedback">Feedback & Suggestions</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help you..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            Subscribe to our newsletter for learning tips and updates
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> How quickly will I receive a response?</h3>
+                    <p>We typically respond to emails within 24 hours during business days. For urgent matters, please use our live chat or phone support.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Do you offer refunds?</h3>
+                    <p>Yes, we offer a 30-day money-back guarantee on all paid courses. Contact us for refund requests and we'll process them promptly.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Can I suggest new skills to be added?</h3>
+                    <p>Absolutely! We love hearing from our community about what skills they'd like to learn. Use the feedback form above to share your suggestions.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> How can I become a content contributor?</h3>
+                    <p>We're always looking for expert contributors. Please contact us with your expertise area and sample content, and we'll review your application.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Is there a mobile app?</h3>
+                    <p>We're currently working on mobile apps for iOS and Android. Join our newsletter to be notified when they're available!</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Do you offer corporate training?</h3>
+                    <p>Yes, we provide customized corporate training solutions. Contact us with your organization's needs for a tailored proposal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Information -->
+    <section class="office-info">
+        <div class="container">
+            <div class="office-content">
+                <div class="office-details">
+                    <h2>Our Office</h2>
+                    <div class="office-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Learning Street<br>Education District<br>San Francisco, CA 94102</p>
+                        </div>
+                    </div>
+                    
+                    <div class="office-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="office-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h4>Time Zone</h4>
+                            <p>Pacific Standard Time (PST)<br>UTC-8</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="office-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p>Interactive Map</p>
+                        <span>Visit us at our San Francisco office</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>SkillMaster</span>
+                    </div>
+                    <p>Your complete skill development platform. Master any skill with our comprehensive resources, expert guidance, and curated content.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Skills</h4>
+                    <ul>
+                        <li><a href="programming.html">Programming</a></li>
+                        <li><a href="web-development.html">Web Development</a></li>
+                        <li><a href="data-science.html">Data Science</a></li>
+                        <li><a href="design.html">UI/UX Design</a></li>
+                        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                        <li><a href="business.html">Business & Finance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="resources.html">Free PDFs</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                        <li><a href="community.html">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SkillMaster Academy. All rights reserved. | <em>Everything you need to learn - no YouTube required!</em></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                window.SkillMaster.showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+        
+        // Chat button
+        document.querySelector('.chat-btn').addEventListener('click', function() {
+            window.SkillMaster.showNotification('Chat feature coming soon! Please use email for now.', 'info');
+        });
+    </script>
+</body>
+</html>
