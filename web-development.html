@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development - SkillMaster Academy</title>
+    <meta name="description" content="Master web development with HTML, CSS, JavaScript, React, and more. Comprehensive courses, tutorials, and resources.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SkillMaster</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Skills <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="programming.html">Programming</a>
+                        <a href="web-development.html" class="active">Web Development</a>
+                        <a href="data-science.html">Data Science</a>
+                        <a href="design.html">UI/UX Design</a>
+                        <a href="digital-marketing.html">Digital Marketing</a>
+                        <a href="business.html">Business & Finance</a>
+                    </div>
+                </li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="skill-hero">
+        <div class="container">
+            <div class="skill-hero-content">
+                <div class="skill-hero-text">
+                    <div class="skill-breadcrumb">
+                        <a href="index.html">Home</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>Web Development</span>
+                    </div>
+                    <h1>Master <span class="gradient-text">Web Development</span></h1>
+                    <p>Build modern, responsive websites and web applications. Learn HTML, CSS, JavaScript, React, Node.js, and more with our comprehensive curriculum.</p>
+                    <div class="skill-stats">
+                        <div class="stat">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">PDF Resources</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">75+</span>
+                            <span class="stat-label">Video Tutorials</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Premium Courses</span>
+                        </div>
+                    </div>
+                    <div class="skill-actions">
+                        <a href="#curriculum" class="btn btn-primary">Start Learning</a>
+                        <a href="#resources" class="btn btn-secondary">
+                            <i class="fas fa-download"></i> Free Resources
+                        </a>
+                    </div>
+                </div>
+                <div class="skill-hero-image">
+                    <div class="skill-icon-large">
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-js-square"></i>
+                        <i class="fab fa-react"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path Section -->
+    <section id="curriculum" class="learning-path">
+        <div class="container">
+            <div class="section-header">
+                <h2>Complete Web Development Path</h2>
+                <p>From beginner to advanced, master every aspect of modern web development</p>
+            </div>
+
+            <div class="path-timeline">
+                <div class="path-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>HTML & CSS Fundamentals</h3>
+                        <p>Learn the building blocks of web development. Master semantic HTML5, modern CSS3, Flexbox, and Grid layouts.</p>
+                        <div class="step-resources">
+                            <span><i class="fas fa-file-pdf"></i> 8 PDFs</span>
+                            <span><i class="fas fa-video"></i> 15 Videos</span>
+                            <span><i class="fas fa-clock"></i> 4 weeks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="path-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>JavaScript Mastery</h3>
+                        <p>Master modern JavaScript ES6+, DOM manipulation, async programming, and popular libraries.</p>
+                        <div class="step-resources">
+                            <span><i class="fas fa-file-pdf"></i> 12 PDFs</span>
+                            <span><i class="fas fa-video"></i> 25 Videos</span>
+                            <span><i class="fas fa-clock"></i> 6 weeks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="path-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Frontend Frameworks</h3>
+                        <p>Build dynamic applications with React, Vue, or Angular. Learn component architecture and state management.</p>
+                        <div class="step-resources">
+                            <span><i class="fas fa-file-pdf"></i> 10 PDFs</span>
+                            <span><i class="fas fa-video"></i> 20 Videos</span>
+                            <span><i class="fas fa-clock"></i> 8 weeks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="path-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Backend Development</h3>
+                        <p>Learn server-side development with Node.js, Express, databases, and API development.</p>
+                        <div class="step-resources">
+                            <span><i class="fas fa-file-pdf"></i> 8 PDFs</span>
+                            <span><i class="fas fa-video"></i> 18 Videos</span>
+                            <span><i class="fas fa-clock"></i> 6 weeks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="technologies">
+        <div class="container">
+            <h2>Technologies You'll Master</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <p>Semantic markup, accessibility, and modern web standards</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <p>Flexbox, Grid, animations, and responsive design</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-js-square"></i>
+                    <h3>JavaScript</h3>
+                    <p>ES6+, async/await, modules, and modern JavaScript</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                    <p>Components, hooks, state management, and ecosystem</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                    <p>Server-side JavaScript, Express, and backend development</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Databases</h3>
+                    <p>MongoDB, PostgreSQL, and database design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2>Free Learning Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>HTML5 Complete Guide</h3>
+                    <p>Comprehensive PDF covering all HTML5 elements, attributes, and best practices.</p>
+                    <a href="#" class="resource-download" data-download="HTML5 Complete Guide">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>CSS3 Mastery Handbook</h3>
+                    <p>Master modern CSS with Flexbox, Grid, animations, and responsive design techniques.</p>
+                    <a href="#" class="resource-download" data-download="CSS3 Mastery Handbook">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>JavaScript ES6+ Guide</h3>
+                    <p>Complete guide to modern JavaScript features, syntax, and best practices.</p>
+                    <a href="#" class="resource-download" data-download="JavaScript ES6+ Guide">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>React Development Guide</h3>
+                    <p>Learn React from basics to advanced concepts including hooks and state management.</p>
+                    <a href="#" class="resource-download" data-download="React Development Guide">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Become a Web Developer?</h2>
+                <p>Join thousands of students who have launched successful web development careers with our comprehensive curriculum.</p>
+                <div class="cta-buttons">
+                    <a href="#curriculum" class="btn btn-primary">Start Learning Now</a>
+                    <a href="contact.html" class="btn btn-outline">Get Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>SkillMaster</span>
+                    </div>
+                    <p>Your complete skill development platform. Master any skill with our comprehensive resources, expert guidance, and curated content.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Skills</h4>
+                    <ul>
+                        <li><a href="programming.html">Programming</a></li>
+                        <li><a href="web-development.html">Web Development</a></li>
+                        <li><a href="data-science.html">Data Science</a></li>
+                        <li><a href="design.html">UI/UX Design</a></li>
+                        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                        <li><a href="business.html">Business & Finance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="resources.html">Free PDFs</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                        <li><a href="community.html">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SkillMaster Academy. All rights reserved. | <em>Everything you need to learn - no YouTube required!</em></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
