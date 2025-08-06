@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Resources - SkillMaster Academy</title>
+    <meta name="description" content="Download free PDFs, guides, cheat sheets, and learning resources for programming, web development, design, and more.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SkillMaster</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Skills <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="programming.html">Programming</a>
+                        <a href="web-development.html">Web Development</a>
+                        <a href="data-science.html">Data Science</a>
+                        <a href="design.html">UI/UX Design</a>
+                        <a href="digital-marketing.html">Digital Marketing</a>
+                        <a href="business.html">Business & Finance</a>
+                    </div>
+                </li>
+                <li><a href="resources.html" class="nav-link active">Resources</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="container">
+            <div class="resources-hero-content">
+                <h1>Free Learning <span class="gradient-text">Resources</span></h1>
+                <p>Download comprehensive PDFs, guides, cheat sheets, and learning materials. Everything you need to master any skill - completely free!</p>
+                <div class="resources-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Free Resources</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">PDF Downloads</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Skill Categories</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Categories -->
+    <section class="resource-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="category-filter active" data-category="all">All Resources</button>
+                <button class="category-filter" data-category="programming">Programming</button>
+                <button class="category-filter" data-category="web-dev">Web Development</button>
+                <button class="category-filter" data-category="design">Design</button>
+                <button class="category-filter" data-category="marketing">Marketing</button>
+                <button class="category-filter" data-category="business">Business</button>
+            </div>
+
+            <div class="resources-grid">
+                <!-- Programming Resources -->
+                <div class="resource-card" data-category="programming">
+                    <div class="resource-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Python Complete Guide</h3>
+                        <p>Comprehensive 150-page PDF covering Python basics to advanced concepts including OOP, data structures, and libraries.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-pdf"></i> 150 pages</span>
+                            <span><i class="fas fa-download"></i> 12.5K downloads</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-download" data-download="Python Complete Guide">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+
+                <div class="resource-card" data-category="programming">
+                    <div class="resource-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Java Programming Handbook</h3>
+                        <p>Master Java programming with this comprehensive guide covering syntax, OOP principles, and popular frameworks.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-pdf"></i> 120 pages</span>
+                            <span><i class="fas fa-download"></i> 8.2K downloads</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-download" data-download="Java Programming Handbook">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+
+                <!-- Web Development Resources -->
+                <div class="resource-card" data-category="web-dev">
+                    <div class="resource-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>HTML5 & CSS3 Masterclass</h3>
+                        <p>Complete guide to modern web development with HTML5 semantic elements, CSS3 features, and responsive design.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-pdf"></i> 90 pages</span>
+                            <span><i class="fas fa-download"></i> 15.7K downloads</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-download" data-download="HTML5 & CSS3 Masterclass">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+
+                <div class="resource-card" data-category="web-dev">
+                    <div class="resource-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>JavaScript ES6+ Guide</h3>
+                        <p>Modern JavaScript features, async programming, modules, and best practices for building dynamic web applications.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-pdf"></i> 110 pages</span>
+                            <span><i class="fas fa-download"></i> 18.3K downloads</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-download" data-download="JavaScript ES6+ Guide">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+
+                <div class="resource-card" data-category="web-dev">
+                    <div class="resource-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>React Development Blueprint</h3>
+                        <p>Complete React guide covering components, hooks, state management, routing, and building production-ready apps.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-pdf"></i> 85 pages</span>
+                            <span><i class="fas fa-download"></i> 11.4K downloads</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-download" data-download="React Development Blueprint">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+
+                <!-- Design Resources -->
+                <div class="resource-card" data-category="design">
+                    <div class="resource-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>UI/UX Design Principles</h3>
+                        <p>Essential design principles, color theory, typography, user experience guidelines, and design thinking methodology.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-pdf"></i> 75 pages</span>
+                            <span><i class="fas fa-download"></i> 9.6K downloads</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-download" data-download="UI/UX Design Principles">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+
+                <div class="resource-card" data-category="design">
+                    <div class="resource-icon">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Figma Design System Guide</h3>
+                        <p>Master Figma with this comprehensive guide covering design systems, components, prototyping, and collaboration.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-pdf"></i> 65 pages</span>
+                            <span><i class="fas fa-download"></i> 7.8K downloads</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-download" data-download="Figma Design System Guide">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+
+                <!-- Marketing Resources -->
+                <div class="resource-card" data-category="marketing">
+                    <div class="resource-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Digital Marketing Handbook</h3>
+                        <p>Complete guide to digital marketing including SEO, social media, content marketing, PPC, and analytics.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-pdf"></i> 140 pages</span>
+                            <span><i class="fas fa-download"></i> 13.2K downloads</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-download" data-download="Digital Marketing Handbook">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+
+                <div class="resource-card" data-category="marketing">
+                    <div class="resource-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>SEO Optimization Guide</h3>
+                        <p>Master search engine optimization with keyword research, on-page SEO, link building, and technical SEO strategies.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-pdf"></i> 95 pages</span>
+                            <span><i class="fas fa-download"></i> 10.7K downloads</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-download" data-download="SEO Optimization Guide">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+
+                <!-- Business Resources -->
+                <div class="resource-card" data-category="business">
+                    <div class="resource-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Business Strategy Playbook</h3>
+                        <p>Strategic planning, market analysis, competitive positioning, and growth strategies for modern businesses.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-pdf"></i> 125 pages</span>
+                            <span><i class="fas fa-download"></i> 6.9K downloads</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-download" data-download="Business Strategy Playbook">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+
+                <div class="resource-card" data-category="business">
+                    <div class="resource-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Financial Management Guide</h3>
+                        <p>Personal and business finance management, budgeting, investment strategies, and financial planning principles.</p>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-file-pdf"></i> 105 pages</span>
+                            <span><i class="fas fa-download"></i> 8.1K downloads</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-download" data-download="Financial Management Guide">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Get New Resources First</h2>
+                <p>Subscribe to our newsletter and be the first to know when we release new free resources, guides, and learning materials.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>SkillMaster</span>
+                    </div>
+                    <p>Your complete skill development platform. Master any skill with our comprehensive resources, expert guidance, and curated content.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Skills</h4>
+                    <ul>
+                        <li><a href="programming.html">Programming</a></li>
+                        <li><a href="web-development.html">Web Development</a></li>
+                        <li><a href="data-science.html">Data Science</a></li>
+                        <li><a href="design.html">UI/UX Design</a></li>
+                        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                        <li><a href="business.html">Business & Finance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="resources.html">Free PDFs</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                        <li><a href="community.html">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SkillMaster Academy. All rights reserved. | <em>Everything you need to learn - no YouTube required!</em></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
